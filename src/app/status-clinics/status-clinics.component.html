@@ -1,0 +1,34 @@
+<div class="col pt-2 pl-2 pr-2 m-0 ">
+    <div class="panel panel-primary">
+        <div [ngClass]="{
+            'ds-bg-panel-success': clinic.c_status == 1,
+            'ds-bg-panel-wrn': clinic.c_status == 2,
+            'ds-bg-panel-error': clinic.c_status == 0,
+            'ds-bg-panel-warning-orange': clinic.c_status == 3
+          }" class="panel-heading p-2">
+          <div class="row" >
+            <div class="col-3 ">
+                <i class="fas fa-cogs fa-2x"></i>
+            </div>
+            <div class="col-9 text-right ">
+                <div class="huge">
+                    {{clinic.c_name}}
+                  </div>
+                <div>Exames Hoje: {{clinic.c_curr_day_studies_total}}</div>
+            </div>
+          </div>
+          <a  href="#">
+              <div [ngClass]="{
+                'ds-ft-panel-success': clinic.c_status == 1,
+                'ds-ft-panel-wrn': clinic.c_status == 2,
+                'ds-ft-panel-error': clinic.c_status == 0,
+                'ds-ft-panel-warning-orange': clinic.c_status ==3
+              }"  class="panel-footer ">
+                  <span class="pull-left">View Details</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+        </div>
+      </div>
+</div>

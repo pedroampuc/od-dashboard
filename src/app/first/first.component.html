@@ -2,44 +2,15 @@
 <div class="container ds-bg ds-fc">
   <div class="row no-gutters ds-row m-0 p-0 w-100">
     <div *ngFor="let cl of clinics; index as i" [attr.data-index]="i" class="">
-        <div class="col pt-2 pl-2 pr-2 m-0 ">
-            <div class="panel panel-primary">
-                <div [ngClass]="{
-                    'ds-bg-panel-success': cl.c_status == 1,
-                    'ds-bg-panel-wrn': cl.c_status == 2,
-                    'ds-bg-panel-error': cl.c_status == 0,
-                    'ds-bg-panel-warning-orange': cl.c_status == 3
-                  }" class="panel-heading p-2">
-                  <div class="row" >
-                    <div class="col-3 ">
-                        <i class="fas fa-cogs fa-2x"></i>
-                    </div>
-                    <div class="col-9 text-right ">
-                        <div class="huge">
-                            {{cl.c_name}}
-                          </div>
-                        <div>Exames Hoje: {{cl.c_curr_day_studies_total}}</div>
-                    </div>
-                  </div>
-                  <a  href="#">
-                      <div [ngClass]="{
-                        'ds-ft-panel-success': cl.c_status == 1,
-                        'ds-ft-panel-wrn': cl.c_status == 2,
-                        'ds-ft-panel-error': cl.c_status == 0,
-                        'ds-ft-panel-warning-orange': cl.c_status ==3
-                      }"  class="panel-footer ">
-                          <span class="pull-left">View Details</span>
-                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                          <div class="clearfix"></div>
-                      </div>
-                  </a>
-                </div>
-              </div>
-        </div>
+        <app-status-clinics class="app-status-clinic" [clinic]="cl"></app-status-clinics>
         <!-- <div class="w-100 d-block d-sm-none"></div> -->
     </div>
-
-
   </div>
+  <div class="row no-gutters ds-row m-0 p-0 w-100">
+      <div *ngFor="let cl of clinics; index as i" [attr.data-index]="i" class="">
+          <app-status-clinics class="app-status-clinic" [clinic]="cl"></app-status-clinics>
+          <!-- <div class="w-100 d-block d-sm-none"></div> -->
+      </div>
+    </div>
 </div>
 </body>
