@@ -1,0 +1,146 @@
+@import "./../../styles.scss";
+
+
+.ds-avatar-round-nav {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.ds-avatar-round {
+  width: 28px;
+  height: 28px;
+}
+
+.ds-avatar {
+  position: relative;
+  width: 100px;
+  height: auto;
+}
+
+.ds-p {
+  font-size: 10px !important;
+}
+
+.ds-icon-p {
+  font-size: 8px !important;
+}
+
+.ds-p-title {
+  font-size: 22px !important;
+}
+
+.ds-p-nav {
+  font-size: 10px !important;
+}
+
+.nv-mat-list {
+  background: #002933;
+}
+
+mat-sidenav {
+  //width: 180px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.ds-brand {
+  width: 180px !important;
+  //min-width: 180px !important;
+}
+
+@media screen and (max-width:600px){
+  .ds-brand {width: 160px !important;}
+}
+
+@media screen and (max-width:600px){
+  mat-sidenav {width: 160px !important;}
+}
+
+@media screen and (min-width:601px){
+  .ds-brand {width: 200px !important;}
+}
+
+@media screen and (min-width:601px){
+  mat-sidenav {width: 200px !important;}
+}
+
+.ds-brand-div {
+  -ms-flex: 0 0 230px;
+  flex: 0 0 230px;
+}
+
+.ds-border {
+ border-style: solid;
+ border-width: 0.5px;
+ border-color: white;
+ border-right: 0.5px;
+}
+
+.mat-toolbar {
+  background: #008fb3;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.a-font {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-drawer-content {
+  width: 100%;
+  background: antiquewhite;
+}
+
+.ds-f {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.ds-nav-menu {
+  display: flex;
+  color: white;
+  cursor: pointer;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  animation-duration: 1s !important;
+}
+
+.ds-nav-menu:active {
+  animation-iteration-count: 3 !important;
+}
+
+.ds-nav-menu:focus {
+  animation-iteration-count: 3 !important;
+}
+
+.ds-nav-menu:hover {
+  animation-iteration-count: infinite !important;
+}
+
+.ds-nav-icon {
+  font-size: 25px !important;
+}
+
+//.ds-bt-bg:hover {
+ // background-color: #274b52;
+  // color: #008fb3;
+//}
+
+.ds-mat-icon {
+  vertical-align: middle !important;
+}
+
+// ANIMACAO DO BUTAO
+.ds-bt-bg {
+  background: #008fb3;
+  border:none !important;
+}
+.ds-bt-bg-ic {
+  background: #008fb3;
+  border:none !important;
+}
+.ds-subtitle-p {
+  line-height: normal;
+}

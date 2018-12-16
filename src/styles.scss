@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles-variable";
+@import "styles-reset";
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/hover.css/scss/hover.scss";
+
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 12px;
+$max_font: 16px;
+
+$blue1: #8aeaf4;
+$blue2: #4ad4e3;
+
+$color-success: #6EEB83;
+$color-warning: rgb(207, 201, 13);
+$color-warning-orange: #FFb800;
+$color-error: #FF5714;
+$color-calm-blue: #1BE7FF;
+
+html, body {
+  height: 100%;
+  height: auto;
+  margin: 0;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+  body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-width:150px !important;
+}
+header {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.flex-fill {
+  flex:1;
+}
+
+.panel-primary {
+  //border-color: #337ab7 !important;
+}
+
+.panel {
+  margin-bottom: 20px;
+  //background-color: #fff !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.huge {
+  font-size: 22px !important;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  //background-color: #f5f5f5 !important;
+  border-top: 1px solid #ddd !important;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.pull-left {
+  float: left!important;
+}
+
+.pull-right {
+  float: right!important;
+}
