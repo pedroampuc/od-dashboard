@@ -94,6 +94,12 @@ mat-sidenav {
   background: antiquewhite;
 }
 
+.form-control:focus {
+  border-width: 2px;
+  border-color: aquamarine !important;
+  outline: 0;
+}
+
 .ds-f {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   font-family: Roboto, "Helvetica Neue", sans-serif !important;
@@ -143,4 +149,34 @@ mat-sidenav {
 }
 .ds-subtitle-p {
   line-height: normal;
+}
+
+.ds-lh {
+  line-height: normal;
+}
+
+.btn-outline-success {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  color:white;
+  border-color: white;
+  line-height: normal;
+  border-radius: 4px;
+  display: flex;
+}
+
+.btn-outline-success:focus {
+  box-shadow: 0 0 0 0.2rem white;
+}
+
+.btn-outline-success:hover {
+  color: $blue2;
+  background-color: white;
+  border-color: white;
+}
+
+.btn-outline-success:active {
+  color: $blue2;
+  background-color: white !important;
+  border-color: white !important;
 }

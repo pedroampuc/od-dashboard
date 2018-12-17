@@ -10,7 +10,7 @@
         <img class="ds-brand w-100 h-100 mh-100 mw-100" src="./../assets/logo.png">
       </div>
       <!-- MENU EXPLICITO -->
-      <div class="col p-1 d-none d-md-flex align-items-center" style="height: inherit;">
+      <div class="col p-1 d-none d-lg-flex align-items-center" style="height: inherit;">
           <button mat-button matRipple class="rounded ds-nav-menu ds-bt-bg a-font hvr-pulse"><p class="p-0 m-0 ds-f">Relatorios</p></button>
           <button mat-button matRipple class="rounded ds-nav-menu ds-bt-bg a-font hvr-pulse">Dashboard</button>
           <button mat-button matRipple class="rounded ds-nav-menu ds-bt-bg a-font hvr-pulse">Clinicas</button>
@@ -55,6 +55,10 @@
                     <div class="d-flex p-0 m-0 ds-subtitle-p" ><p class="p-0 m-0 a-font">dashboard</p></div>
                   </div>
               </div>
+              <form class="d-none d-sm-flex form-inline my-2 my-lg-0  ">
+                  <input class="form-control mr-sm-2 p-0 ds-lh" type="search" placeholder=" Pesquisar..." aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0 p-1 ds-lh" type="submit"> Buscar</button>
+                </form>
         </div>
         <!-- <button type="button"  id="ds1" (click)="buttonClick()" class="btn d-flex ds-nav-menu"  (click)="drawer.toggle()"><i class="fas fa-bars ds-nav-icon"></i></button> -->
       </div>
@@ -80,6 +84,12 @@
           <br>
           <span class="a-font ds-p"> what </span>
         </p>
+      </mat-list-item>
+      <mat-list-item>
+          <form class="d-flex d-sm-none form-inline my-2 my-lg-0  ">
+              <input class="form-control mr-sm-2 p-0 ds-lh" type="search" placeholder=" Pesquisar..." aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0 p-1 ds-lh" type="submit"> Buscar</button>
+            </form>
       </mat-list-item>
     </mat-list>
     <mat-nav-list>

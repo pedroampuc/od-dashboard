@@ -1,5 +1,10 @@
 @import "./../../styles.scss";
 
+body {
+  //display: flex;
+  height: 100vh !important;
+  overflow: auto;
+}
 .app-status-clinic {
   display: flex;
   flex-direction: row;
@@ -13,6 +18,7 @@ img {
 
 .ds-bg {
   background-color: lavenderblush;
+  overflow: scroll;
 }
 .ds-fc {
   color: black !important;
@@ -24,6 +30,7 @@ img {
 }
 
 .container-fluid {
+  display: flex;
   height: 100vh !important;
   width: 100% !important;
   max-width: 100% !important;
@@ -41,13 +48,13 @@ img {
 }
 
 .container {
-  height: 100vh !important;
+  height: 40vh !important;
   width: 100%;
   max-width: 100% !important;
   padding-right:0;
   padding-left:0;
-  margin-right:0 !important;
-  margin-left:0 !important;
+  //margin-right:0 !important;
+  //margin-left:0 !important;
 }
 
 .ds-row:last-child {
