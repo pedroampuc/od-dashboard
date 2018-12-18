@@ -1,16 +1,16 @@
 <body class="d-flex h-100 w-100">
-<div class="container ds-bg ds-fc mt-2 ml-2 mr-2 mb-2">
-  <div class="row no-gutters ds-row m-0 p-0 w-100">
-    <div *ngFor="let cl of clinics; index as i" [attr.data-index]="i" class="">
-        <app-status-clinics class="app-status-clinic" [clinic]="cl"></app-status-clinics>
-        <!-- <div class="w-100 d-block d-sm-none"></div> -->
+    <div class="container ds-bg ds-fc mt-2 ml-2 mr-2 mb-2">
+        <div class="row no-gutters ds-row m-0 p-0 w-100">
+            <div *ngFor="let cl of clinics; index as i" [attr.data-index]="i" class="">
+                <app-status-clinics class="app-status-clinic" [clinic]="cl"></app-status-clinics>
+                <!-- <div class="w-100 d-block d-sm-none"></div> -->
+            </div>
+        </div>
+        <div class="row no-gutters ds-row m-0 p-0 w-100">
+            <div *ngFor="let cl of clinics; index as i" [attr.data-index]="i" class="">
+                <app-status-clinics class="app-status-clinic" [clinic]="cl"></app-status-clinics>
+                <!-- <div class="w-100 d-block d-sm-none"></div> -->
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row no-gutters ds-row m-0 p-0 w-100">
-      <div *ngFor="let cl of clinics; index as i" [attr.data-index]="i" class="">
-          <app-status-clinics class="app-status-clinic" [clinic]="cl"></app-status-clinics>
-          <!-- <div class="w-100 d-block d-sm-none"></div> -->
-      </div>
-    </div>
-</div>
 </body>
