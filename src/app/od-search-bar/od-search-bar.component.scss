@@ -1,0 +1,48 @@
+@import "./../../styles.scss";
+
+.a-font {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.ds-sb {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: rgb(100, 100, 100) !important;
+  border-radius: 0px;
+  //line-height: 24px !important;
+}
+
+.ds-lh {
+  line-height: normal;
+}
+
+.ds-isb-bg {
+  background-color:  #f8f8f8;
+  color: #828282;
+  font-size: 20px;
+}
+
+.ds-nav-menu {
+  display: flex;
+  color: white;
+  cursor: pointer;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  animation-duration: 1s !important;
+}
+
+.ds-nav-menu:active {
+  animation-iteration-count: 3 !important;
+}
+
+.ds-nav-menu:focus {
+  animation-iteration-count: 3 !important;
+}
+
+.ds-nav-menu:hover {
+  animation-iteration-count: infinite !important;
+}
+
+.ds-nav-icon {
+  font-size: 25px !important;
+}

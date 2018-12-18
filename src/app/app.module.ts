@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatRippleModule} from '@angular/material/core';
 import { StatusClinicsComponent } from './status-clinics/status-clinics.component';
+import { OdSearchBarComponent } from './od-search-bar/od-search-bar.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { StatusClinicsComponent } from './status-clinics/status-clinics.componen
     NavigationComponent,
     FirstComponent,
     SecondComponent,
-    StatusClinicsComponent
+    StatusClinicsComponent,
+    OdSearchBarComponent
   ],
   imports: [
     BrowserModule,
